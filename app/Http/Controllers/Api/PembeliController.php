@@ -88,4 +88,12 @@ class PembeliController extends Controller
         $pembeli->delete();
         return response(null, 204);
     }
+
+    public function getByUsername (Request $request)
+    {
+        $username = $request->route('username');
+        info('This is some useful information.');
+        return Pembeli::where('username', '=', $username)->firstOrFail(); 
+        //more logic here
+    }
 }

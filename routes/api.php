@@ -24,3 +24,4 @@ Route::apiResource('mahasiswa', MahasiswaController::class);
 Route::apiResource('barang', BarangController::class);
 Route::apiResource('pembeli', PembeliController::class);
 Route::apiResource('staff', StaffController::class);
+Route::get('/auth/{username}', [PembeliController::class, 'getByUsername']);
